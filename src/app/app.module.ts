@@ -12,6 +12,11 @@ import { AnimViewComponent } from './anim-view/anim-view.component';
 import { AuthViewComponent } from './auth-view/auth-view.component';
 import { LoginViewComponent } from './auth-view/login-view/login-view.component';
 import { RegisterViewComponent } from './auth-view/register-view/register-view.component';
+import { HomeViewComponent } from './home-view/home-view.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +25,8 @@ import { RegisterViewComponent } from './auth-view/register-view/register-view.c
     AnimViewComponent,
     AuthViewComponent,
     LoginViewComponent,
-    RegisterViewComponent
+    RegisterViewComponent,
+    HomeViewComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,9 @@ import { RegisterViewComponent } from './auth-view/register-view/register-view.c
     MatTabsModule,
     MatFormFieldModule,
     MatInputModule,
-    LottieAnimationViewModule.forRoot()
+    LottieAnimationViewModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
