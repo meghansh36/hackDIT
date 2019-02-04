@@ -28,7 +28,7 @@ export class AnimViewComponent implements OnInit {
   ngOnInit() {
     this.animConfig = {
       path: this.animPath,
-      renderer: 'canvas',
+      renderer: 'svg',
       autoplay: true,
       loop: true
     };

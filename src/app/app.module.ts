@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatTabsModule,MatFormFieldModule,MatInputModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatTabsModule,MatFormFieldModule,
+  MatInputModule,MatRadioModule,MatStepperModule,MatChipsModule } from '@angular/material';
 import { LottieAnimationViewModule } from 'ng-lottie';
 import { NavComponent } from './nav/nav.component';
 import { AnimViewComponent } from './anim-view/anim-view.component';
@@ -16,6 +17,8 @@ import { HomeViewComponent } from './home-view/home-view.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { ReportViewComponent } from './report-view/report-view.component';
+import { ChipInputComponent } from './chip-input/chip-input.component';
 
 
 @NgModule({
@@ -26,7 +29,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AuthViewComponent,
     LoginViewComponent,
     RegisterViewComponent,
-    HomeViewComponent
+    HomeViewComponent,
+    ReportViewComponent,
+    ChipInputComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +46,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     MatTabsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatRadioModule,
+    MatStepperModule,
+    MatChipsModule,
     LottieAnimationViewModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule

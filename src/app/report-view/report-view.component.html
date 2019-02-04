@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row align-items-center" style="text-align: center;align-content: center">
+    <div class="col-sm-12">
+      <h1>REPORT SYMPTOMS</h1>
+      <app-anim-view [animPath]="'../assets/animations/report_anim.json'" [height]="'250'" [width]="'300'" [animSpeed]="'1.0'"></app-anim-view>
+      <p>Your input is crucial to survival of many</p>
+      <div class="report-form">
+        <mat-vertical-stepper>
+          <mat-step>
+            <div>
+              <ng-template matStepLabel>Fill out details</ng-template>
+              <mat-form-field appearance="fill">
+                <mat-label>Enter City District</mat-label>
+                <input matInput placeholder="District">
+                <mat-hint>Location helps us to map the spread of epidemic area wise</mat-hint>
+              </mat-form-field>
+              <div style="margin: 10px;">
+                <p>Your Association:</p>
+                <mat-radio-group formControlName="floatLabel">
+                  <mat-radio-button value="hospital">Hosptial/Clinic Representative</mat-radio-button>
+                  <mat-radio-button value="patient">Patient in Ailment</mat-radio-button>
+                  <mat-radio-button value="citizen">Responsible Well-wisher</mat-radio-button>
+                </mat-radio-group>
+              </div>
+              <div>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </div>
+          </mat-step>
+          <mat-step>
+            <div>
+              <ng-template matStepLabel>Fill out Symptoms</ng-template>
+              <app-chip-input [list]="symptoms" [placeholderText]="'Enter Symptoms'"></app-chip-input>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </div>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            <app-anim-view [animPath]="'../assets/animations/success_report_anim.json'" [height]="'200'" [width]="'300'"
+              [animSpeed]="'0.5'"></app-anim-view>
+            <p>An applause for your cooperation</p>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
+            </div>
+          </mat-step>
+        </mat-vertical-stepper>
+      </div>
+    </div>
+  </div>
