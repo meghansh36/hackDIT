@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatTabsModule,MatFormFieldModule,
-  MatInputModule,MatRadioModule,MatStepperModule,MatChipsModule } from '@angular/material';
+  MatInputModule,MatRadioModule,MatStepperModule,MatChipsModule,MatProgressSpinnerModule } from '@angular/material';
 import { LottieAnimationViewModule } from 'ng-lottie';
 import { NavComponent } from './nav/nav.component';
 import { AnimViewComponent } from './anim-view/anim-view.component';
@@ -50,6 +50,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     MatRadioModule,
     MatStepperModule,
     MatChipsModule,
+    MatProgressSpinnerModule,
     LottieAnimationViewModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,

@@ -12,6 +12,10 @@
     margin-bottom: 2%;
 }
 
+.input{
+    margin: 4%;
+}
+
 .mat-form-field{
     align-self: flex-start;
     text-align: left;
