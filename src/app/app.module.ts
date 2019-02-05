@@ -19,6 +19,7 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ReportViewComponent } from './report-view/report-view.component';
 import { ChipInputComponent } from './chip-input/chip-input.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ChipInputComponent } from './chip-input/chip-input.component';
     MatChipsModule,
     LottieAnimationViewModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
