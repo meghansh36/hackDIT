@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <app-anim-view [animPath]="'../assets/animations/chat_anim.json'" [height]="'250'" [width]="'300'" [animSpeed]="'1.0'"></app-anim-view>
+      <h3 style="margin-top: 1%;margin-bottom: 1%;">I am Bot</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title><strong>INTERACTIVE MEDIA BOT</strong></mat-card-title>
+        </mat-card-header>
+        <!-- <div>
+          <mat-toolbar color="primary">
+            <span>Interactive Media Bot</span>
+          </mat-toolbar>
+        </div> -->
+        <mat-card-content>
+          <div class="chat-container">
+            <mat-form-field appearance="fill">
+              <mat-label>Ask us Anything</mat-label>
+              <input matInput placeholder="Just Type">
+              <mat-icon matSuffix>send</mat-icon>
+            </mat-form-field>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatTabsModule,MatFormFieldModule,
-  MatInputModule,MatRadioModule,MatStepperModule,MatChipsModule,MatProgressSpinnerModule } from '@angular/material';
+  MatInputModule,MatRadioModule,MatStepperModule,MatChipsModule,MatProgressSpinnerModule,MatCardModule } from '@angular/material';
 import { LottieAnimationViewModule } from 'ng-lottie';
 import { NavComponent } from './nav/nav.component';
 import { AnimViewComponent } from './anim-view/anim-view.component';
@@ -20,6 +20,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ReportViewComponent } from './report-view/report-view.component';
 import { ChipInputComponent } from './chip-input/chip-input.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { ChatFunctionComponent } from './chat-function/chat-function.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     RegisterViewComponent,
     HomeViewComponent,
     ReportViewComponent,
-    ChipInputComponent
+    ChipInputComponent,
+    ChatFunctionComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +53,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     MatStepperModule,
     MatChipsModule,
     MatProgressSpinnerModule,
+    MatCardModule,
     LottieAnimationViewModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,

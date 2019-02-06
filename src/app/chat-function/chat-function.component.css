@@ -1,0 +1,18 @@
+.container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    align-content: center;
+}
+
+.chat-container{
+    min-height: 600px;
+    height: 70%;
+}
+.mat-form-field{
+    width: 100%;
+    left: 0px;
+    align-self:center;
+    position: absolute;
+    bottom: 0px;
+}
