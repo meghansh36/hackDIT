@@ -4,10 +4,10 @@
     <mat-toolbar>MENU</mat-toolbar>
     <mat-nav-list>
       <app-anim-view [animPath]="'../assets/animations/nav_anim.json'" [height]="'200'" [width]="'200'" [animSpeed]="'0.5'"></app-anim-view>
-      <a mat-list-item href="#">Home</a>
-      <a mat-list-item href="#">Report Epidemic Information</a>
-      <a mat-list-item href="#">Interactive Media Bot</a>
-      <a mat-list-item href="#">Sign In</a>
+      <a mat-list-item routerLink="/home">Home</a>
+      <a mat-list-item routerLink="/report-epidemic">Report Epidemic Information</a>
+      <a mat-list-item routerLink="/chat-function">Interactive Media Bot</a>
+      <a mat-list-item routerLink="/auth">Sign In</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

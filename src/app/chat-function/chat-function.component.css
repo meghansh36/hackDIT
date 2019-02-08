@@ -6,10 +6,16 @@
 }
 
 .chat-container{
-    min-height: 600px;
-    height: 70%;
+    height: 600px;
 }
 .mat-form-field{
+    width: 100%;
+    left: 0px;
+    align-self:center;
+    position: absolute;
+    bottom: 0px;
+}
+.progress{
     width: 100%;
     left: 0px;
     align-self:center;

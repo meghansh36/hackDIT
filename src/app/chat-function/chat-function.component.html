@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm-12">
       <app-anim-view [animPath]="'../assets/animations/chat_anim.json'" [height]="'250'" [width]="'300'" [animSpeed]="'1.0'"></app-anim-view>
-      <h3 style="margin-top: 1%;margin-bottom: 1%;">I am Bot</h3>
+      <h3 style="margin-top: 2%;margin-bottom: 2%;">BOT NAME COMES HERE</h3>
     </div>
   </div>
   <div class="row">
@@ -11,17 +11,16 @@
         <mat-card-header>
           <mat-card-title><strong>INTERACTIVE MEDIA BOT</strong></mat-card-title>
         </mat-card-header>
-        <!-- <div>
-          <mat-toolbar color="primary">
-            <span>Interactive Media Bot</span>
-          </mat-toolbar>
-        </div> -->
         <mat-card-content>
           <div class="chat-container">
+            <app-msg-view></app-msg-view>
+            <mat-progress-bar *ngIf="showLoading" mode="indeterminate" class="progress" color="warn"></mat-progress-bar>
             <mat-form-field appearance="fill">
-              <mat-label>Ask us Anything</mat-label>
-              <input matInput placeholder="Just Type">
-              <mat-icon matSuffix>send</mat-icon>
+              <mat-label>Ask me anything</mat-label>
+              <input matInput placeholder="Just Type" #query>
+              <button mat-icon-button color="primary" matSuffix (click)="sendQuery(query.value)">
+                <mat-icon>send</mat-icon>
+              </button>
             </mat-form-field>
           </div>
         </mat-card-content>

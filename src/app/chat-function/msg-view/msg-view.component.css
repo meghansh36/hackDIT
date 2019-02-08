@@ -1,0 +1,29 @@
+mat-list{
+    height: 500px;
+    flex-grow: 1;
+    overflow: auto;
+}
+mat-list-item{
+    max-width: 50%;
+    width: min-content;
+}
+.user-msg{
+    background-color:dodgerblue;
+    text-align: center;
+    float: left;
+    margin: 2%;
+    border: 2px solid;
+    justify-content: flex-start;
+    align-self: flex-start;
+}
+
+.bot-msg{
+    background-color:teal;
+    text-align:center;
+    align-content: flex-end;
+    float: right;
+    margin: 2%;
+    border: 2px solid;
+    justify-content:flex-end;
+    align-self: flex-end;
+}
