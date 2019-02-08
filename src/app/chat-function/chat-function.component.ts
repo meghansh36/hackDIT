@@ -1,6 +1,7 @@
-import { Subject, BehaviorSubject } from 'rxjs';
+import {BehaviorSubject } from 'rxjs';
 import { BotModelService } from './../services/bot-model.service';
 import { Component, OnInit } from '@angular/core';
+import {Message} from './message'
 
 @Component({
   selector: 'app-chat-function',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatFunctionComponent implements OnInit {
 
-  private messageSubject: BehaviorSubject<string[]>;
+  private messageSubject: BehaviorSubject<Message[]>;
   showLoading: boolean = false;
   constructor(private botService: BotModelService) { }
 
@@ -20,7 +21,7 @@ export class ChatFunctionComponent implements OnInit {
   sendQuery(query: string) {
     this.showLoading=true;
     const previousMessages = this.messageSubject.getValue();
-    const newMessages = [...previousMessages, ...[query]];
+    const newMessages = [...previousMessages, ...[new Message(query,Message.SENDER_TYPE_USER)]];
     this.messageSubject.next(newMessages);
   }
 

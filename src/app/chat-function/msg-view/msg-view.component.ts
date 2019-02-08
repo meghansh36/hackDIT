@@ -1,4 +1,5 @@
-import { Subject, BehaviorSubject } from 'rxjs';
+import { Message } from './../message';
+import { BehaviorSubject } from 'rxjs';
 import { BotModelService } from './../../services/bot-model.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,8 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MsgViewComponent implements OnInit {
 
-  private messageSubject: BehaviorSubject<string[]>
-  private messages: string[];
+  private messageSubject: BehaviorSubject<Message[]>
+  private messages: Message[];
   constructor(private botService: BotModelService) {
     this.messageSubject = botService.getSubject();
   }

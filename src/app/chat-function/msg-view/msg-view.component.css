@@ -7,7 +7,7 @@ mat-list-item{
     max-width: 50%;
     width: min-content;
 }
-.user-msg{
+.bot-msg{
     background-color:dodgerblue;
     text-align: center;
     float: left;
@@ -17,7 +17,7 @@ mat-list-item{
     align-self: flex-start;
 }
 
-.bot-msg{
+.user-msg{
     background-color:teal;
     text-align:center;
     align-content: flex-end;
