@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class MsgViewComponent implements OnInit {
 
   private messageSubject: BehaviorSubject<Message[]>
-  private messages: Message[];
+  public messages: Message[];
   constructor(private botService: BotModelService) {
     this.messageSubject = botService.getSubject();
   }
