@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # Depolyed Project
 
 https://hackamity-692c2.firebaseapp.com/  
-Please ignore the hackamity-692c2, we have just used hosting service from that project in firebase console, I have reached limit for maximum number of firebase project per account. So could not build a new one.
+Please ignore the hackamity-692c2, we have just used hosting service from that project in firebase console, I have reached the limit for maximum number of firebase projects per account. So could not build a new one.
