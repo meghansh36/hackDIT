@@ -26,13 +26,9 @@ export class ChipInputComponent implements OnInit {
   add(event: MatChipInputEvent): void {
     const input = event.input;
     const value = event.value;
-
-    // Add our fruit
     if ((value || '').trim()) {
       this.list.push({ name: value.trim() });
     }
-
-    // Reset the input value
     if (input) {
       input.value = '';
     }
