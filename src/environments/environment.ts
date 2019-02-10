@@ -12,7 +12,10 @@ export const environment = {
     storageBucket: "hackamity-692c2.appspot.com",
     messagingSenderId: "350822236150"
   },
-  dialogflow:'1a5784ab0feb447e9bcf7a9abb4f1505'
+  dialogflow:'1a5784ab0feb447e9bcf7a9abb4f1505',
+  mapbox: {
+    accessToken: 'pk.eyJ1IjoidmFzdWRldjEzIiwiYSI6ImNqbmU5ZjM4bjB4dWIzcm8wMTdrd2U5emUifQ.u7TFbd6KyXTxs7N-pkL-eA',
+  }
 };
 
 /*

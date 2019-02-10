@@ -6,7 +6,8 @@
 }
 
 .chat-container{
-    height: 600px;
+    height: 400px;
+    overflow: hidden;
 }
 .mat-form-field{
     width: 100%;

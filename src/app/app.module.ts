@@ -19,6 +19,7 @@ import { ChipInputComponent } from './chip-input/chip-input.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { MsgViewComponent } from './chat-function/msg-view/msg-view.component';
 import {HttpClientModule} from '@angular/common/http';
+import { MapViewComponent } from './map-view/map-view.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {HttpClientModule} from '@angular/common/http';
     RegisterViewComponent,
     ChipInputComponent,
     MsgViewComponent,
-    routingComponents
+    routingComponents,
+    MapViewComponent
   ],
   imports: [
     BrowserModule,

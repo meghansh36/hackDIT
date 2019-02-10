@@ -1,29 +1,10 @@
 mat-list{
-    height: 500px;
+    height: 80%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     flex-grow: 1;
-    overflow: auto;
+    overflow: scroll;
 }
-mat-list-item{
-    max-width: 50%;
-    width: min-content;
-}
-.bot-msg{
-    background-color:dodgerblue;
-    text-align: center;
-    float: left;
-    margin: 2%;
-    border: 2px solid;
-    justify-content: flex-start;
-    align-self: flex-start;
-}
-
-.user-msg{
-    background-color:teal;
-    text-align:center;
-    align-content: flex-end;
-    float: right;
-    margin: 2%;
-    border: 2px solid;
-    justify-content:flex-end;
-    align-self: flex-end;
+::-webkit-scrollbar { 
+    display: none; 
 }
