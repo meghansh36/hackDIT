@@ -21,6 +21,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { MsgViewComponent } from './chat-function/msg-view/msg-view.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PredictionSheetComponent } from './prediction-sheet/prediction-sheet.component';
+import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
 
 
 @NgModule({
@@ -59,6 +60,9 @@ import { PredictionSheetComponent } from './prediction-sheet/prediction-sheet.co
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     HttpClientModule,
+    NgxMapboxGLModule.withConfig({
+      accessToken:environment.mapbox.accessToken,
+    }),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   entryComponents:[
