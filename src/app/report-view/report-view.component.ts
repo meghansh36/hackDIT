@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
-import { MatBottomSheet } from '@angular/material';
+import {  MatDialog } from '@angular/material';
 import { PredictionSheetComponent } from '../prediction-sheet/prediction-sheet.component';
-
+import { ServerService } from '../services/server.service';
 
 @Component({
   selector: 'app-report-view',
@@ -10,17 +10,28 @@ import { PredictionSheetComponent } from '../prediction-sheet/prediction-sheet.c
 })
 export class ReportViewComponent implements OnInit {
 
-  symptoms:Array<any>;
+  symptoms: Array<any>;
 
-  constructor(private bottomSheet:MatBottomSheet) { 
-    this.symptoms=new Array();
+  constructor(private dialog: MatDialog, private server: ServerService) {
+    this.symptoms = new Array();
   }
 
   ngOnInit() {
   }
 
-  predictDisease(){
-    this.bottomSheet.open(PredictionSheetComponent);
+  predictDisease() {
+
+    if (this.symptoms.length === 0) {
+      alert('Please enter symptoms');
+    } else {
+      this.dialog.open(PredictionSheetComponent, {
+        height: '300px',
+        width: '300px'
+      });
+      this.server.getDiseasePrediction(this.symptoms).subscribe((prediction) => {
+        console.log(prediction);
+      });
+    }
   }
 
 }

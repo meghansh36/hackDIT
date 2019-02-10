@@ -1,6 +1,6 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatChipInputEvent } from '@angular/material';
-import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { COMMA } from '@angular/cdk/keycodes';
 
 @Component({
   selector: 'app-chip-input',
@@ -10,15 +10,18 @@ import { COMMA, ENTER } from '@angular/cdk/keycodes';
 export class ChipInputComponent implements OnInit {
 
   @Input()
-  list: Array<any>
+  list: Array<any>;
 
   @Input()
-  placeholderText:string;
+  options: Array<any>;
+
+  @Input()
+  placeholderText: string;
 
   selectable = true;
   removable = true;
   addOnBlur = true;
-  readonly separatorKeysCodes: number[] = [ENTER, COMMA];
+  readonly separatorKeysCodes: number[] = [COMMA];
 
   add(event: MatChipInputEvent): void {
     const input = event.input;
@@ -43,11 +46,20 @@ export class ChipInputComponent implements OnInit {
     }
   }
 
-
-  constructor() { }
-
-  ngOnInit() {
+  addSelect(event) {
+    const option = event.option;
+    const value = option.value;
+    if ((value || '').trim()) {
+      this.list.push({ name: value.trim() });
+    }
     console.log(this.list);
   }
+
+
+  constructor() {
+    this.options = ['Fever', 'Obesity', 'Hyper Tension'];
+  }
+
+  ngOnInit() {}
 
 }
