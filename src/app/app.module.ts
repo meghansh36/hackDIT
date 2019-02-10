@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatTabsModule,MatFormFieldModule,
-  MatInputModule,MatRadioModule,MatStepperModule,MatChipsModule,MatProgressSpinnerModule,MatCardModule, MatProgressBarModule } from '@angular/material';
+  MatInputModule,MatRadioModule,MatStepperModule,MatChipsModule,MatProgressSpinnerModule,MatCardModule, MatProgressBarModule,
+  MatBottomSheetModule } from '@angular/material';
 import { LottieAnimationViewModule } from 'ng-lottie';
 import { NavComponent } from './nav/nav.component';
 import { AnimViewComponent } from './anim-view/anim-view.component';
@@ -19,7 +20,7 @@ import { ChipInputComponent } from './chip-input/chip-input.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { MsgViewComponent } from './chat-function/msg-view/msg-view.component';
 import {HttpClientModule} from '@angular/common/http';
-import { MapViewComponent } from './map-view/map-view.component';
+import { PredictionSheetComponent } from './prediction-sheet/prediction-sheet.component';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { MapViewComponent } from './map-view/map-view.component';
     ChipInputComponent,
     MsgViewComponent,
     routingComponents,
-    MapViewComponent
+    PredictionSheetComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,11 +54,15 @@ import { MapViewComponent } from './map-view/map-view.component';
     MatProgressSpinnerModule,
     MatCardModule,
     MatProgressBarModule,
+    MatBottomSheetModule,
     LottieAnimationViewModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+  ],
+  entryComponents:[
+    PredictionSheetComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

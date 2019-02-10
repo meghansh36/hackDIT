@@ -1,4 +1,6 @@
 import { Component, OnInit} from '@angular/core';
+import { MatBottomSheet } from '@angular/material';
+import { PredictionSheetComponent } from '../prediction-sheet/prediction-sheet.component';
 
 
 @Component({
@@ -10,11 +12,15 @@ export class ReportViewComponent implements OnInit {
 
   symptoms:Array<any>;
 
-  constructor() { 
+  constructor(private bottomSheet:MatBottomSheet) { 
     this.symptoms=new Array();
   }
 
   ngOnInit() {
+  }
+
+  predictDisease(){
+    this.bottomSheet.open(PredictionSheetComponent);
   }
 
 }
