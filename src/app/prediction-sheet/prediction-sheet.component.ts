@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatBottomSheetRef } from '@angular/material';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-prediction-sheet',
@@ -8,9 +8,9 @@ import { MatBottomSheetRef } from '@angular/material';
 })
 export class PredictionSheetComponent implements OnInit {
 
-  constructor(private bottomSheet:MatBottomSheetRef<PredictionSheetComponent>) { }
+  constructor(private dialog: MatDialogRef<PredictionSheetComponent>) { }
 
-  displayMsg:string='Fetching Prediction';
+  displayMsg = 'Fetching Prediction';
   ngOnInit() {
   }
 

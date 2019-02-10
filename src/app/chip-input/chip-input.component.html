@@ -5,6 +5,12 @@
         <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
       </mat-chip>
       <input placeholder="{{placeholderText}}" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-        [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
-    </mat-chip-list>
+        [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)" matInput [matAutocomplete]="auto">
+
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="addSelect($event)">
+          <mat-option *ngFor="let option of options" [value]="option">
+              {{ option }}
+          </mat-option>
+      </mat-autocomplete>
+      </mat-chip-list>
   </mat-form-field>
