@@ -1,8 +1,11 @@
 <div class="container prediction-sheet">
   <div class="row">
     <div>
-      <app-anim-view style="text-align: center;align-self: center;align-content: center" [animPath]="'../assets/animations/predict_anim.json'" [height]="'200'" [width]="'200'" [animSpeed]="'1.0'"></app-anim-view>
-      <h4>{{displayMsg}}</h4>
+      <app-anim-view *ngIf='showAnim' style="text-align: center;align-self: center;align-content: center" [animPath]="'../assets/animations/predict_anim.json'" [height]="'200'" [width]="'200'" [animSpeed]="'1.0'"></app-anim-view>
+      <app-anim-view *ngIf='!showAnim' style="text-align: center;align-self: center;align-content: center" [animPath]="'../assets/animations/check-animation.json'" [height]="'200'" [width]="'200'" [animSpeed]="'1.0'"></app-anim-view>
+      <h3 *ngIf='!showAnim'>Predicted Disease Is</h3>
+      <h4><strong>{{displayMsg}}</strong></h4>
+
     </div>
   </div>
 </div>

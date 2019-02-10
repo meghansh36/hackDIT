@@ -1,14 +1,14 @@
-<mat-form-field appearance="fill">
+  <mat-form-field appearance="fill">
     <mat-chip-list #chipList>
       <mat-chip *ngFor="let listItem of list" [selectable]="selectable" [removable]="removable" (removed)="remove(listItem)">
-        {{listItem.name}}
+        {{listItem}}
         <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
       </mat-chip>
-      <input placeholder="{{placeholderText}}" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-        [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)" matInput [matAutocomplete]="auto">
+      <input placeholder="{{placeholderText}}" [matChipInputFor]="chipList"
+        [matChipInputAddOnBlur]="addOnBlur" matInput [matAutocomplete]="auto" [formControl]="myControl" #chipInput (focus)="inputFocus()">
 
-        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="addSelect($event)">
-          <mat-option *ngFor="let option of options" [value]="option">
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="addSelect($event, chipInput)">
+          <mat-option *ngFor="let option of filteredOptions" [value]="option">
               {{ option }}
           </mat-option>
       </mat-autocomplete>

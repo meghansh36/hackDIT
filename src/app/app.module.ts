@@ -24,7 +24,7 @@ import { MsgViewComponent } from './chat-function/msg-view/msg-view.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PredictionSheetComponent } from './prediction-sheet/prediction-sheet.component';
 import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,6 +43,7 @@ import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
+    ReactiveFormsModule,
     MatAutocompleteModule,
     MatDialogModule,
     MatToolbarModule,

@@ -8,19 +8,19 @@ import { Component, OnInit, Input } from '@angular/core';
 export class AnimViewComponent implements OnInit {
 
   @Input()
-  animPath: string
+  animPath: string;
 
   @Input()
-  height: number=400;
+  height = 400;
 
   @Input()
-  width: number=400;
+  width = 400;
 
   @Input()
-  animSpeed:number=1.0;
+  animSpeed = 1.0;
 
   animConfig: Object;
-  private anim:any;
+  private anim: any;
 
   constructor() {
   }

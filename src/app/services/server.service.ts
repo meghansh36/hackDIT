@@ -11,6 +11,6 @@ export class ServerService {
   constructor(private http: HttpClient) { }
 
   getDiseasePrediction(symptoms) {
-   return this.http.post('http://localhost:8080/prediction', symptoms);
+   return this.http.post('http://localhost:8080/prediction', {payload: symptoms});
   }
 }
